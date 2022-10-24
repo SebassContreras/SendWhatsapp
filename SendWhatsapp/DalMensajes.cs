@@ -67,7 +67,7 @@ namespace SendWhatsapp
             }
             catch (Exception exeption)
             {
-                Debug.WriteLine("ERROR SELECT Mensajes: " + exeption.Message);
+                Debug.WriteLine("ERROR update Mensajes: " + exeption.Message);
             }
             finally
             {

@@ -88,7 +88,7 @@ namespace SendWhatsapp
             }
             return listTelefono;
         }
-        public List<ModelClientas> SelectNumTelefono(int cont)
+        public List<ModelClientas> SelectNumTelefono(int act, int ant)
         {
             ConnectDb cnn = new ConnectDb();
             List<ModelClientas> listTelefono = new List<ModelClientas>();
@@ -97,7 +97,7 @@ namespace SendWhatsapp
             {
                 //String query
                 String query = @"SELECT telefono FROM clientas
-                                    WHERE idClienta BETWEEN "+cont+" AND "+ (cont + 500)+ "";
+                                    WHERE idClienta BETWEEN "+(ant+1)+" AND "+(act + ant)+ "";
 
                 //Conexion creada
                 SqlCommand comand = new SqlCommand(query, cnn.Connection);
